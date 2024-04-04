@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    margin: 0 50px;
+    background-color: #e5e5e5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .app {
+    background-color: #fff;
+    width: 300px;
+    height: 500px;
+    border: 5px solid #abcea1;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: scroll;
+  }
+  
+  .app::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  
+  #addNew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(171, 206, 161, 0.35);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fa-plus {
+    background-color: #abcea1;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  
+  #tasks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  #tasks div {
+    border: 3px solid #abcea1;
+    background-color: #e2eede;
+    border-radius: 6px;
+    padding: 10px;
+    display: grid;
+    gap: 4px;
+  }
+
+  
+  #tasks div .options {
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+ 
+  
+  #tasks div .options i {
+    cursor: pointer;
+  }
+  
+  #msg {
+    color: red;
+  }
+  
+.task_checkbox {
+
+  position: relative;
+  
+  
+}
+
+
+.task_checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color:#e2eede;
+
+}
+
+.task_checkbox:hover::before {
+  
+  border: 1px solid black;
+  background-color:#abcea1;
+
+}
+
+.task_checkbox:checked::before {
+  border: 1px solid black;
+  background-color: #abcea1;
+}
+
+.task_checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  font-family: "Segoe Fluent Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status{
+  text-align: start;
+}
+.task_title{
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
