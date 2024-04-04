@@ -106,7 +106,7 @@ body {
 }
 
 .task_checkbox:checked::after {
-  content: "";
+  content: "✔";
   position: absolute;
   top: 50%;
   left: 3px;
